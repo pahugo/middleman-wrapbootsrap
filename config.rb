@@ -49,3 +49,4 @@ activate :sprockets
 sprockets.append_path File.join(root, 'vendor')
 
 activate :relative_assets
+activate :livereload
