@@ -5,4 +5,28 @@ body {
 .g-ml-minus-150 {
   margin-left: -10.14286rem; }
 
+@media (max-width: 480px) {
+
+.firstimage {
+  background-image:url('/images/accueil2-min.jpg');
+  height: calc(100vh);
+  }
+.secondimage {
+	height: 140%;
+	background-image:url('/images/accueilmin.jpg');
+}
+}
+
+@media (min-width: 481px) {
+
+.firstimage {
+  background-image:url('/images/accueil2.jpg');
+  height: calc(100vh);
+}
+
+.secondimage {
+	height: 140%;
+	background-image:url('/images/accueil.jpg');
+}
+}
 

@@ -7,12 +7,16 @@
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= current_page.data.title || "Middleman" %></title>
-    <%= stylesheet_link_tag "site" %>
-    <%= javascript_include_tag "site" %>
+ 
     <link href='https://fonts.googleapis.com/css?family=Electrolize' rel='stylesheet' type='text/css' />
     <link href='https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-
      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+         <%= stylesheet_link_tag "site" %>
+
   </head>
   <body>
     <main>
@@ -34,7 +38,7 @@
 
             <!-- Logo -->
             <a href="../../../index.html" class="navbar-brand">
-              <%= image_tag 'logo_stravo1.png', alt:'Image Description', height: 70 %>
+              <%= image_tag 'logo_stravo3.png', alt:'Image Description', height: 70 %>
             </a>
             <!-- End Logo -->
 
@@ -82,7 +86,7 @@
 
     <%= yield %>
       <!-- Footer -->
-  <footer class="footer-gradient sticky g-py-20 g-mt-30">
+  <footer class="footer-gradient sticky g-py-20 g-bg-orange">
     <div class="container">
       <div class="row">
  <!-- <a class="btn u-btn-primary g-brd-2 g-brd-white g-font-size-13 g-rounded-50 g-pl-20 g-pr-15 g-py-9" href="#">
@@ -94,14 +98,11 @@
         <!-- Footer Content -->
         <div class="col-12 g-px-6">
           <ul class="list-unstyled text-center mb-0">
-          <%= image_tag("logo_stravo1.png", class: "img-fluid", alt: "Stravo artisan plâtrier à Strasbourg", style: 'height: 50%; width: 50%; max-width: 150px; margin-right: 8%;') %>
-          <a class="u-icon-v3 u-icon-size--sm g-font-size-30 g-bg-orange g-bg-orange--hover g-color-white rounded-circle" href="#" target="_blank">
+          <%= image_tag("logo_stravo3.png", class: "img-fluid", alt: "Stravo artisan plâtrier à Strasbourg", style: 'height: 50%; width: 50%; max-width: 150px; margin-right: 8%;') %>
+          <a class="u-icon-v3 u-icon-size--sm g-font-size-30 g-bg-white g-bg-orange--hover g-color-gray-dark-v4 rounded-circle" href="#" target="_blank">
             <i class="fab fa-facebook"></i>
           </a>
-          <a class="u-icon-v3 u-icon-size--sm g-font-size-30 g-bg-orange-opacity-0_7 g-bg-orange--hover g-color-white rounded-circle" href="#" target="_blank">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a class="u-icon-v3 u-icon-size--sm g-font-size-30 g-bg-orange-opacity-0_7 g-bg-orange--hover g-color-white rounded-circle" href="#">
+          <a class="u-icon-v3 u-icon-size--sm g-font-size-30 g-bg-white g-bg-orange--hover g-color-gray-dark-v4 rounded-circle" href="#">
             <i class="far fa-envelope"></i>
           </a>
           </ul>
@@ -134,27 +135,18 @@
       <!-- Copyright -->
       <div class="row align-items-center">
         <div class="col-12 text-center g-mb-15 g-mb-0--md">
-          <small class="g-font-size-10 mb-0">© 2018 All right reserved. Development by
-            <a class="g-color-white g-color-white--hover" href="https://www.linkedin.com/in/mathilde-ray/" target="_blank">Mathilde Ray</a>
+          <small class="g-font-size-10 mb-0">© 2019 All right reserved.
           </small>
         </div>
       </div>
       <!-- End Copyright -->
     </div>
+
   </footer>
   <!-- End Footer -->
-
+<%= javascript_include_tag "site", defer: true%>
         </main>
 
-    <!-- JS Plugins Init. -->
-  <script>
 
-
-    $(window).on('load', function () {
-      // initialization of header
-      $.HSCore.components.HSHeader.init($('#js-header'));
-      $.HSCore.helpers.HSHamburgers.init('.hamburger');
-    });
-  </script>
   </body>
 </html>

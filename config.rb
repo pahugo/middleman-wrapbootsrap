@@ -40,13 +40,15 @@ page '/*.txt', layout: false
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 
-configure :build do
-  activate :minify_css
-  activate :minify_javascript
-end
+# configure :build do
+#   activate :minify_css
+#   activate :minify_javascript
+#   #activate :critical, :binary => '/usr/bin/critical'  # binary defaults to 'critical'
+# end
 
 activate :sprockets
 sprockets.append_path File.join(root, 'vendor')
 
 activate :relative_assets
-activate :livereload
+# activate :livereload
+activate :asset_hash

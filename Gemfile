@@ -11,3 +11,4 @@ gem 'middleman-livereload'
 # Sprockets
 gem 'middleman-sprockets'
 gem 'compass'
+gem "middleman-critical", "~>0.0.2"
