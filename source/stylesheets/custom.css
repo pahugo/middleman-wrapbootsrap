@@ -8,7 +8,7 @@ body {
 @media (max-width: 480px) {
 
 .firstimage {
-  background-image:url('/images/accueil2-min.jpg');
+  background-image:url('/images/accueil2min2.jpg');
   height: calc(100vh);
   }
 .secondimage {
@@ -20,7 +20,7 @@ body {
 @media (min-width: 481px) {
 
 .firstimage {
-  background-image:url('/images/accueil2.jpg');
+  background-image:url('/images/accueil32.jpg');
   height: calc(100vh);
 }
 

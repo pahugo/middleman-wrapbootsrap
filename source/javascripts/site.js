@@ -19,14 +19,13 @@
 //= require gmaps/gmaps.min
 
 
-
-
 //=require unify/offcanvas
 //=require unify/hs.core
 //=require unify/hs.header
+//=require unify/hs.go-to
 //=require unify/hs.hamburgers
 //=require unify/hs.popup
-//=require unify/hs.go-to
+
 
 
 $(window).on('load', function () {
@@ -34,3 +33,7 @@ $(window).on('load', function () {
     $.HSCore.components.HSHeader.init($('#js-header'));
     $.HSCore.helpers.HSHamburgers.init('.hamburger');
     });
+
+    $(document).on('ready', function () {
+            $.HSCore.components.HSGoTo.init('.js-go-to');
+});
